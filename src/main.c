@@ -17,7 +17,23 @@ int main(int argc, char *argv[]){
 
   frame_t *frame;
   packed_frame_t *packed_frame;
-  frame = frame_create(atoi(argv[1]), atoi(argv[2]), atoi(argv[3]));
+  uint8_t colour_depth;
+  packing_t packing = packing_decode(argv[3]);
+  colour_t colour = {atoi(argv[5]), atoi(argv[6]), atoi(argv[7])};
+
+  switch (packing){
+    case R210:
+      colour_depth = 10;
+      break;
+    case R12L:
+    case R12B:
+      colour_depth = 12;
+      break;
+    default:
+      break;
+  }
+
+  frame = frame_create(atoi(argv[1]), atoi(argv[2]), colour_depth);
 
   if (frame->n_pixels % 8 != 0){
     printf("%s : ERROR : Total number of pixels must be divisable by 8...\n", argv[0]);
@@ -73,15 +89,22 @@ int main(int argc, char *argv[]){
       break;
   }
 
-  frame_clamp(frame, ((1 << frame->colour_depth) - 1));
-  write_binary(frame, argv[8]);
+  frame_clamp(frame, 16, ((1 << frame->colour_depth) - 1)-16);
 
-  switch (frame->colour_depth){
-    case 10:
+  if (strcmp(argv[8], "--") != 0){
+    write_binary(frame, argv[8]);
+  }
+
+  switch (packing){
+    case R210:
       packed_frame = pack_r210(frame);
       break;
-    case 12:
+    case R12L:
+      packed_frame = pack_r12l(frame);
+      break;
+    case R12B:
       packed_frame = pack_r12b(frame);
+      break;
     default:
       break;
   }
@@ -90,7 +113,10 @@ int main(int argc, char *argv[]){
 
   frame_destroy(frame);
 
-  write_packed_binary(packed_frame, argv[9]);
+  if (strcmp(argv[9], "--") != 0){
+    write_packed_binary(packed_frame, argv[9]);
+  }
+
   packed_frame_destroy(packed_frame);
 
   return 0;

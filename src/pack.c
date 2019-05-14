@@ -32,6 +32,20 @@ void packed_frame_destroy(packed_frame_t *packed_frame){
   free(packed_frame);
 }
 
+packing_t packing_decode(const char *str){
+  packing_t packing;
+
+  if (strcmp(str, "R210") == 0) {
+    packing = R210;
+  } else if (strcmp(str, "R12B") == 0){
+    packing = R12B;
+  } else if (strcmp(str, "R12L") == 0){
+    packing = R12L;
+  }
+
+  return packing;
+}
+
 packed_frame_t *pack_r210(frame_t *frame){
   packed_frame_t *packed_frame = packed_frame_create(frame, R210);
   uint32_t i;
@@ -49,8 +63,8 @@ packed_frame_t *pack_r210(frame_t *frame){
   return packed_frame;
 }
 
-packed_frame_t *pack_r12b(frame_t *frame){
-  packed_frame_t *packed_frame = packed_frame_create(frame, R12B);
+packed_frame_t *pack_r12l(frame_t *frame){
+  packed_frame_t *packed_frame = packed_frame_create(frame, R12L);
 
   uint32_t i;
   uint8_t j;
@@ -100,20 +114,20 @@ packed_frame_t *pack_r12b(frame_t *frame){
   return packed_frame;
 }
 
-packed_frame_t *pack_r12l(frame_t *frame){
-  packed_frame_t *r12b_frame = pack_r12b(frame);
-  packed_frame_t *packed_frame = packed_frame_create(frame, R12L);
+packed_frame_t *pack_r12b(frame_t *frame){
+  packed_frame_t *r12l_frame = pack_r12l(frame);
+  packed_frame_t *packed_frame = packed_frame_create(frame, R12B);
   uint32_t i;
 
-  for (i=0; i<r12b_frame->len_32; i++){
+  for (i=0; i<r12l_frame->len_32; i++){
     packed_frame->pixel_data[i] = 0;
-    packed_frame->pixel_data[i] += (r12b_frame->pixel_data[i] & 0xFF000000) >> 24;
-    packed_frame->pixel_data[i] += (r12b_frame->pixel_data[i] & 0x000000FF) << 24;
-    packed_frame->pixel_data[i] += (r12b_frame->pixel_data[i] & 0x00FF0000) >> 8;
-    packed_frame->pixel_data[i] += (r12b_frame->pixel_data[i] & 0x0000FF00) << 8;
+    packed_frame->pixel_data[i] += (r12l_frame->pixel_data[i] & 0xFF000000) >> 24;
+    packed_frame->pixel_data[i] += (r12l_frame->pixel_data[i] & 0x000000FF) << 24;
+    packed_frame->pixel_data[i] += (r12l_frame->pixel_data[i] & 0x00FF0000) >> 8;
+    packed_frame->pixel_data[i] += (r12l_frame->pixel_data[i] & 0x0000FF00) << 8;
   }
 
-  packed_frame_destroy(r12b_frame);
+  packed_frame_destroy(r12l_frame);
 
   return packed_frame;
 }
