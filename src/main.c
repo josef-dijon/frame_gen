@@ -44,6 +44,9 @@ int main(int argc, char *argv[]){
   printf("Frame height    : %d\n", frame->height);
   printf("Colour depth    : %d bits\n", frame->colour_depth);
   printf("Pixels          : %d\n", frame->n_pixels);
+  printf("Packing         : %s\n", argv[3]);
+  printf("RGB             : (%d %d %d)\n", colour.r, colour.g, colour.b);
+
 
   switch (atoi(argv[4])) {
     case 0:
@@ -67,8 +70,6 @@ int main(int argc, char *argv[]){
 
   printf("File size       : %d bytes (%0.3f MB)\n", frame->n_pixels*6, (float)frame->n_pixels*6/1024/1024);
 
-  colour_t colour = {atoi(argv[5]), atoi(argv[6]), atoi(argv[7])};
-  
   switch (atoi(argv[4])) {
     case 0:
       fill_solid(frame, colour);
