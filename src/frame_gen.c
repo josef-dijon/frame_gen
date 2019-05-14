@@ -34,21 +34,41 @@ void write_binary(frame_t *frame, const char *f_name){
   fclose(f);
 }
 
-pixel_t pixel_clamp(pixel_t *pixel, uint16_t clamp_value){
-  pixel_t pixel_clamped = {
-    .r = pixel->r < clamp_value ? pixel->r : clamp_value, 
-    .g = pixel->g < clamp_value ? pixel->g : clamp_value, 
-    .b = pixel->b < clamp_value ? pixel->b : clamp_value 
-  };
+pixel_t pixel_clamp(pixel_t *pixel, uint16_t min_clamp_value, uint16_t max_clamp_value){
+  pixel_t pixel_clamped;
+
+  if (pixel->r < min_clamp_value){
+    pixel_clamped.r = min_clamp_value;
+  } else if (pixel->r > max_clamp_value){
+    pixel_clamped.r = max_clamp_value;
+  } else{
+    pixel_clamped.r = pixel->r;
+  }
+
+  if (pixel->g < min_clamp_value){
+    pixel_clamped.g = min_clamp_value;
+  } else if (pixel->g > max_clamp_value){
+    pixel_clamped.g = max_clamp_value;
+  } else{
+    pixel_clamped.g = pixel->g;
+  }
+
+  if (pixel->b < min_clamp_value){
+    pixel_clamped.b = min_clamp_value;
+  } else if (pixel->b > max_clamp_value){
+    pixel_clamped.b = max_clamp_value;
+  } else{
+    pixel_clamped.b = pixel->b;
+  }
 
   return pixel_clamped;
 }
 
-void frame_clamp(frame_t *frame, uint16_t clamp_value){
+void frame_clamp(frame_t *frame, uint16_t min_clamp_value, uint16_t max_clamp_value){
   uint32_t i;
-  
+
   for (i=0; i<frame->n_pixels; i++){
-    frame->pixels[i] = pixel_clamp(&(frame->pixels[i]), clamp_value);
+    frame->pixels[i] = pixel_clamp(&(frame->pixels[i]), min_clamp_value, max_clamp_value);
   }
 }
 
