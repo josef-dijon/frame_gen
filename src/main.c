@@ -61,13 +61,13 @@ int main(int argc, char *argv[]){
       fill_checker(frame, colour);
       break;
     case 2:
-      fill_ramp_h(frame, colour);
+      fill_ramp_h(frame, colour, ((1 << frame->colour_depth) - 1));
       break;
     case 3:
-      fill_ramp_v(frame, colour);
+      fill_ramp_v(frame, colour, ((1 << frame->colour_depth) - 1));
       break;
     case 4:
-      fill_ramp_d(frame, colour);
+      fill_ramp_d(frame, colour, ((1 << frame->colour_depth) - 1));
       break;
     default:
       break;
