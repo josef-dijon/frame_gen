@@ -34,21 +34,21 @@ void write_binary(frame_t *frame, const char *f_name){
   fclose(f);
 }
 
-pixel_t pixel_clamp(pixel_t *pixel, uint8_t colour_depth){
+pixel_t pixel_clamp(pixel_t *pixel, uint16_t clamp_value){
   pixel_t pixel_clamped = {
-    .r = pixel->r & ((1 << colour_depth) - 1),
-    .g = pixel->g & ((1 << colour_depth) - 1),
-    .b = pixel->b & ((1 << colour_depth) - 1),
+    .r = pixel->r < clamp_value ? pixel->r : clamp_value, 
+    .g = pixel->g < clamp_value ? pixel->g : clamp_value, 
+    .b = pixel->b < clamp_value ? pixel->b : clamp_value 
   };
 
   return pixel_clamped;
 }
 
-void frame_clamp(frame_t *frame){
+void frame_clamp(frame_t *frame, uint16_t clamp_value){
   uint32_t i;
   
   for (i=0; i<frame->n_pixels; i++){
-    frame->pixels[i] = pixel_clamp(&(frame->pixels[i]), frame->colour_depth);
+    frame->pixels[i] = pixel_clamp(&(frame->pixels[i]), clamp_value);
   }
 }
 

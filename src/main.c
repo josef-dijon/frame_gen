@@ -73,7 +73,7 @@ int main(int argc, char *argv[]){
       break;
   }
 
-  frame_clamp(frame);
+  frame_clamp(frame, ((1 << frame->colour_depth) - 1));
   write_binary(frame, argv[8]);
 
   switch (frame->colour_depth){
