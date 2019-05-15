@@ -42,3 +42,10 @@ And a packed frame: 1920x1080_purple_checker.R210
 # Batch Run
 
 ./gen_frames.sh
+
+# Usage in SignalLab
+
+- Select the Video Mode and Pixel Format to match the test pattern file you want to use.
+- Add a "Video: Raw File" generator and enter the path to the test pattern file. Leave the "packing" and "depth" fields set to 0.
+- Add any other generators you want to use.
+- Start.
