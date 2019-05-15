@@ -1,13 +1,13 @@
 #!/bin/bash
 
-FRAME_GEN=./frame_gen/build/frame_gen
-FRAME_GEN_OUT_DIR=frame_gen/build
+FRAME_GEN=./build/frame_gen
+FRAME_GEN_OUT_DIR=build
 
 rm -f ./*.R210
 rm -f ./*.R12B
 rm -f ./*.R12L
 
-PATTERNS="solid checker horiz_ramp vert_ramp diag_ramp"
+PATTERNS="solid checker horiz_ramp vert_ramp diag_ramp prbs15"
 PACKS="R12L R210"
 FORMATS="1280:720 1920:1080 2048:1080 3840:2160 4096:2160"
 
@@ -32,8 +32,6 @@ do
 
       PATT_NUM=$((PATT_NUM + 1))
     done;
-
-    ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} 5 0 0 0 -- ${WIDTH}x${HEIGHT}_prbs15.${PACK}
   done;
 done;
 

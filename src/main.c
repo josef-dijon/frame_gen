@@ -90,7 +90,7 @@ int main(int argc, char *argv[]){
       fill_ramp_d(frame, colour, ((1 << frame->colour_depth) - 1));
       break;
     case 5:
-      fill_prbs15(frame);
+      fill_prbs15(frame, colour);
       break;
     default:
       break;
