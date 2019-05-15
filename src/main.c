@@ -64,6 +64,9 @@ int main(int argc, char *argv[]){
     case 4:
       printf("Pattern         : diagonal ramp\n");
       break;
+    case 5:
+      printf("Pattern         : prbs15\n");
+      break;
     default:
       break;
   }
@@ -85,6 +88,9 @@ int main(int argc, char *argv[]){
       break;
     case 4:
       fill_ramp_d(frame, colour, ((1 << frame->colour_depth) - 1));
+      break;
+    case 5:
+      fill_prbs15(frame);
       break;
     default:
       break;
@@ -134,6 +140,7 @@ void print_usage(void){
   printf("                        2 horizontal ramp\n");
   printf("                        3 vertical ramp\n");
   printf("                        4 diagonal ramp\n");
+  printf("                        5 prbs15\n");
   printf("  r g b               RGB values used to fill the patterns\n");
   printf("  frame_path          path to output unpacked frame to\n");
   printf("  packed_frame_path   path to output packed frame to\n");
