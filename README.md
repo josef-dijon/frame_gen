@@ -1,3 +1,10 @@
+# Dependencies
+
+- cmake
+- make
+- gcc
+- python3.x
+
 # Build:
 ```bash
 mkdir build
