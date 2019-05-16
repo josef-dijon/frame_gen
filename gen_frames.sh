@@ -1,11 +1,10 @@
 #!/bin/bash
 
 FRAME_GEN=./build/frame_gen
-FRAME_GEN_OUT_DIR=build
+FRAME_GEN_OUT_DIR=frames
 
-rm -f ./*.R210
-rm -f ./*.R12B
-rm -f ./*.R12L
+rm -rf ./${FRAME_GEN_OUT_DIR}
+mkdir ./${FRAME_GEN_OUT_DIR}
 
 PATTERNS="solid checker horiz_ramp vert_ramp diag_ramp prbs15"
 PACKS="R12L R210"
@@ -21,14 +20,14 @@ do
     PATT_NUM=0
     for PATT in ${PATTERNS}
     do
-      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 0    0    0    -- ${WIDTH}x${HEIGHT}_${PATT}_black.${PACK}
-      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 0    0    4096 -- ${WIDTH}x${HEIGHT}_${PATT}_blue.${PACK}
-      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 0    4096 0    -- ${WIDTH}x${HEIGHT}_${PATT}_green.${PACK}
-      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 0    4096 4096 -- ${WIDTH}x${HEIGHT}_${PATT}_cyan.${PACK}
-      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 4096 0    0    -- ${WIDTH}x${HEIGHT}_${PATT}_red.${PACK}
-      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 4096 0    4096 -- ${WIDTH}x${HEIGHT}_${PATT}_purple.${PACK}
-      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 4096 4096 0    -- ${WIDTH}x${HEIGHT}_${PATT}_yellow.${PACK}
-      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 4096 4096 4096 -- ${WIDTH}x${HEIGHT}_${PATT}_white.${PACK}
+      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 0    0    0    -- ${FRAME_GEN_OUT_DIR}/${WIDTH}x${HEIGHT}_${PATT}_black.${PACK}
+      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 0    0    4096 -- ${FRAME_GEN_OUT_DIR}/${WIDTH}x${HEIGHT}_${PATT}_blue.${PACK}
+      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 0    4096 0    -- ${FRAME_GEN_OUT_DIR}/${WIDTH}x${HEIGHT}_${PATT}_green.${PACK}
+      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 0    4096 4096 -- ${FRAME_GEN_OUT_DIR}/${WIDTH}x${HEIGHT}_${PATT}_cyan.${PACK}
+      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 4096 0    0    -- ${FRAME_GEN_OUT_DIR}/${WIDTH}x${HEIGHT}_${PATT}_red.${PACK}
+      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 4096 0    4096 -- ${FRAME_GEN_OUT_DIR}/${WIDTH}x${HEIGHT}_${PATT}_purple.${PACK}
+      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 4096 4096 0    -- ${FRAME_GEN_OUT_DIR}/${WIDTH}x${HEIGHT}_${PATT}_yellow.${PACK}
+      ${FRAME_GEN} ${WIDTH} ${HEIGHT} ${PACK} ${PATT_NUM} 4096 4096 4096 -- ${FRAME_GEN_OUT_DIR}/${WIDTH}x${HEIGHT}_${PATT}_white.${PACK}
 
       PATT_NUM=$((PATT_NUM + 1))
     done;

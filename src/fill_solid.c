@@ -8,9 +8,9 @@ void fill_solid(frame_t *frame, colour_t colour){
     for (x=0; x<frame->width; x++){
       idx = y * frame->width + x;
 
-      frame->pixels[idx].r = colour.r;
-      frame->pixels[idx].g = colour.g;
-      frame->pixels[idx].b = colour.b;
+      frame->pixel_data[idx].r = colour.r;
+      frame->pixel_data[idx].g = colour.g;
+      frame->pixel_data[idx].b = colour.b;
     }
   }
 }

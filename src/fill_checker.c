@@ -10,23 +10,23 @@ void fill_checker(frame_t *frame, colour_t colour){
 
       if (y % 2 == 0) { /* Is even line */
         if (x % 2 == 0) { /* Is even pixel */
-          frame->pixels[idx].r = colour.r;
-          frame->pixels[idx].g = colour.g;
-          frame->pixels[idx].b = colour.b;
+          frame->pixel_data[idx].r = colour.r;
+          frame->pixel_data[idx].g = colour.g;
+          frame->pixel_data[idx].b = colour.b;
         } else { /* Is odd pixel */
-          frame->pixels[idx].r = 0;
-          frame->pixels[idx].g = 0;
-          frame->pixels[idx].b = 0;
+          frame->pixel_data[idx].r = 0;
+          frame->pixel_data[idx].g = 0;
+          frame->pixel_data[idx].b = 0;
         }
       } else { /* Is odd line */
         if (x % 2 == 1) { /* Is odd pixel */
-          frame->pixels[idx].r = colour.r;
-          frame->pixels[idx].g = colour.g;
-          frame->pixels[idx].b = colour.b;
+          frame->pixel_data[idx].r = colour.r;
+          frame->pixel_data[idx].g = colour.g;
+          frame->pixel_data[idx].b = colour.b;
         } else { /* Is even pixel */
-          frame->pixels[idx].r = 0;
-          frame->pixels[idx].g = 0;
-          frame->pixels[idx].b = 0;
+          frame->pixel_data[idx].r = 0;
+          frame->pixel_data[idx].g = 0;
+          frame->pixel_data[idx].b = 0;
         }
       }
     }

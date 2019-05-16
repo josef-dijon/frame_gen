@@ -15,25 +15,13 @@ int main(int argc, char *argv[]){
 
   printf("Frame Gen v0.1\n");
 
-  frame_t *frame;
   packed_frame_t *packed_frame;
-  uint8_t colour_depth;
-  packing_t packing = packing_decode(argv[3]);
+  packing_t packing = packing_decode_str(argv[3]);
+  uint8_t cdepth = cdepth_from_packing(packing);
   colour_t colour = {atoi(argv[5]), atoi(argv[6]), atoi(argv[7])};
 
-  switch (packing){
-    case R210:
-      colour_depth = 10;
-      break;
-    case R12L:
-    case R12B:
-      colour_depth = 12;
-      break;
-    default:
-      break;
-  }
-
-  frame = frame_create(atoi(argv[1]), atoi(argv[2]), colour_depth);
+  /* Always RGB444 and 16 bit for raw frame. */
+  frame_t *frame = frame_create(atoi(argv[1]), atoi(argv[2]), 16, RGB444);
 
   if (frame->n_pixels % 8 != 0){
     printf("%s : ERROR : Total number of pixels must be divisable by 8...\n", argv[0]);
@@ -42,7 +30,7 @@ int main(int argc, char *argv[]){
 
   printf("Frame width     : %d\n", frame->width);
   printf("Frame height    : %d\n", frame->height);
-  printf("Colour depth    : %d bits\n", frame->colour_depth);
+  printf("Colour depth    : %d bits\n", cdepth);
   printf("Pixels          : %d\n", frame->n_pixels);
   printf("Packing         : %s\n", argv[3]);
   printf("RGB             : (%d %d %d)\n", colour.r, colour.g, colour.b);
@@ -81,13 +69,13 @@ int main(int argc, char *argv[]){
       fill_checker(frame, colour);
       break;
     case 2:
-      fill_ramp_h(frame, colour, ((1 << frame->colour_depth) - 1));
+      fill_ramp_h(frame, colour, ((1 << cdepth) - 1));
       break;
     case 3:
-      fill_ramp_v(frame, colour, ((1 << frame->colour_depth) - 1));
+      fill_ramp_v(frame, colour, ((1 << cdepth) - 1));
       break;
     case 4:
-      fill_ramp_d(frame, colour, ((1 << frame->colour_depth) - 1));
+      fill_ramp_d(frame, colour, ((1 << cdepth) - 1));
       break;
     case 5:
       fill_prbs15(frame, colour);
@@ -96,21 +84,32 @@ int main(int argc, char *argv[]){
       break;
   }
 
-  frame_clamp(frame, 16, ((1 << frame->colour_depth) - 1)-16);
+  frame_clamp(frame, 16, ((1 << cdepth) - 1)-16);
 
   if (strcmp(argv[8], "--") != 0){
     write_binary(frame, argv[8]);
   }
 
   switch (packing){
+    case V210:
+      // packed_frame = pack_V210(frame);
+      printf("%s : ERROR : YCbCr colour space not currently supported...\n", argv[0]);
+      return 3;
+      break;
+    case ARGB:
+      packed_frame = pack_ARGB(frame);
+      break;
+    case BGRA:
+      packed_frame = pack_BGRA(frame);
+      break;
     case R210:
-      packed_frame = pack_r210(frame);
+      packed_frame = pack_R210(frame);
       break;
     case R12L:
-      packed_frame = pack_r12l(frame);
+      packed_frame = pack_R12L(frame);
       break;
     case R12B:
-      packed_frame = pack_r12b(frame);
+      packed_frame = pack_R12B(frame);
       break;
     default:
       break;

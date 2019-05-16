@@ -8,14 +8,14 @@ void fill_prbs15(frame_t *frame, colour_t colour){
   for (i=0; i<frame->n_pixels; i++){
     bit = ((a >> 14) ^ (a >> 13)) & 1;
     a = ((a << 1) | bit) & 0x7FFF;
-    frame->pixels[i].r = colour.r ? a : 0;
+    frame->pixel_data[i].r = colour.r ? a : 0;
 
     bit = ((a >> 14) ^ (a >> 13)) & 1;
     a = ((a << 1) | bit) & 0x7FFF;
-    frame->pixels[i].g = colour.g ? a : 0;
+    frame->pixel_data[i].g = colour.g ? a : 0;
 
     bit = ((a >> 14) ^ (a >> 13)) & 1;
     a = ((a << 1) | bit) & 0x7FFF;
-    frame->pixels[i].b = colour.b ? a : 0;
+    frame->pixel_data[i].b = colour.b ? a : 0;
   }
 }
