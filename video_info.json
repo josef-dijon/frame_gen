@@ -1,0 +1,1274 @@
+{
+  "video_modes": [
+    {
+      "name": "525i59.94",
+      "fourcc": "ntsc",
+      "format": "sd",
+      "scan": "interlaced",
+      "m_rate": 1.001,
+      "width": 720,
+      "height": 486,
+      "field_rate": 60,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "625i50",
+      "fourcc": "pal ",
+      "format": "sd",
+      "scan": "interlaced",
+      "m_rate": 1.000,
+      "width": 720,
+      "height": 576,
+      "field_rate": 50,
+      "frame_rate": 25,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "720p50",
+      "fourcc": "hp50",
+      "format": "hd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 1280,
+      "height": 720,
+      "field_rate": 50,
+      "frame_rate": 50,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "720p59.94",
+      "fourcc": "hp59",
+      "format": "hd",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 1280,
+      "height": 720,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "720p60",
+      "fourcc": "hp60",
+      "format": "hd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 1280,
+      "height": 720,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080i50",
+      "fourcc": "Hi50",
+      "format": "hd",
+      "scan": "interlaced",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 50,
+      "frame_rate": 25,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080i59.94",
+      "fourcc": "Hi59",
+      "format": "hd",
+      "scan": "interlaced",
+      "m_rate": 1.001,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 30,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080i60",
+      "fourcc": "Hi60",
+      "format": "hd",
+      "scan": "interlaced",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 60,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080PsF23.98",
+      "fourcc": "80p1",
+      "format": "hd",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.001,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 48,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080PsF24",
+      "fourcc": "80p2",
+      "format": "hd",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 48,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080PsF25",
+      "fourcc": "80p3",
+      "format": "hd",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 50,
+      "frame_rate": 25,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080PsF29.97",
+      "fourcc": "80p4",
+      "format": "hd",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.001,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 60,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080PsF30",
+      "fourcc": "80p5",
+      "format": "hd",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 60,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p23.98",
+      "fourcc": "23ps",
+      "format": "fhd",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 24,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p24",
+      "fourcc": "24ps",
+      "format": "fhd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 24,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p25",
+      "fourcc": "Hp25",
+      "format": "fhd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 25,
+      "frame_rate": 25,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p29.97",
+      "fourcc": "Hp29",
+      "format": "fhd",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 30,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p30",
+      "fourcc": "Hp30",
+      "format": "fhd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 30,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p47.95",
+      "fourcc": "Hp47",
+      "format": "fhd",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 48,
+      "frame_rate": 48,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p48",
+      "fourcc": "Hp48",
+      "format": "fhd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 48,
+      "frame_rate": 48,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p50",
+      "fourcc": "Hp50",
+      "format": "fhd-hip",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 50,
+      "frame_rate": 50,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p59.94",
+      "fourcc": "Hp59",
+      "format": "fhd-hip",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "1080p60",
+      "fourcc": "Hp60",
+      "format": "fhd-hip",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 1920,
+      "height": 1080,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp23.98",
+      "fourcc": "2d23",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 24,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp24",
+      "fourcc": "2d24",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 24,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp25",
+      "fourcc": "2d25",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 25,
+      "frame_rate": 25,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp29.97",
+      "fourcc": "2d29",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 30,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp30",
+      "fourcc": "2d30",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 30,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp47.95",
+      "fourcc": "2d47",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 48,
+      "frame_rate": 48,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp48",
+      "fourcc": "2d48",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 48,
+      "frame_rate": 48,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp50",
+      "fourcc": "2d50",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 50,
+      "frame_rate": 50,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp59.94",
+      "fourcc": "2d59",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2Kp60",
+      "fourcc": "2d60",
+      "format": "2k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 50,
+      "frame_rate": 50,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2KPsF23.98",
+      "fourcc": "2dp1",
+      "format": "2k-dci",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.001,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 48,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2KPsF24",
+      "fourcc": "2dp2",
+      "format": "2k-dci",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 48,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2KPsF25",
+      "fourcc": "2dp3",
+      "format": "2k-dci",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 50,
+      "frame_rate": 25,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2KPsF29.97",
+      "fourcc": "2dp4",
+      "format": "2k-dci",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.001,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 60,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI2KPsF30",
+      "fourcc": "2dp5",
+      "format": "2k-dci",
+      "scan": "progressive segmented frame",
+      "m_rate": 1.000,
+      "width": 2048,
+      "height": 1080,
+      "field_rate": 60,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "2160p23.98",
+      "fourcc": "4k23",
+      "format": "uhd",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 3840,
+      "height": 2160,
+      "field_rate": 24,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "2160p24",
+      "fourcc": "4k24",
+      "format": "uhd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 3840,
+      "height": 2160,
+      "field_rate": 24,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "2160p25",
+      "fourcc": "4k25",
+      "format": "uhd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 3840,
+      "height": 2160,
+      "field_rate": 25,
+      "frame_rate": 25,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "2160p29.97",
+      "fourcc": "4k29",
+      "format": "uhd",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 3840,
+      "height": 2160,
+      "field_rate": 30,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "2160p30",
+      "fourcc": "4k30",
+      "format": "uhd",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 3840,
+      "height": 2160,
+      "field_rate": 30,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "2160p50",
+      "fourcc": "4k50",
+      "format": "uhd-hip",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 3840,
+      "height": 2160,
+      "field_rate": 50,
+      "frame_rate": 50,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","v210"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "2160p59.94",
+      "fourcc": "4k59",
+      "format": "uhd-hip",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 3840,
+      "height": 2160,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","v210"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "2160p60",
+      "fourcc": "4k60",
+      "format": "uhd-hip",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 3840,
+      "height": 2160,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","v210"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp23.98",
+      "fourcc": "4d23",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 24,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp24",
+      "fourcc": "4d24",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 24,
+      "frame_rate": 24,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp25",
+      "fourcc": "4d25",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 25,
+      "frame_rate": 25,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp29.97",
+      "fourcc": "4d29",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 30,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp30",
+      "fourcc": "4d30",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 30,
+      "frame_rate": 30,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp47.95",
+      "fourcc": "4d47",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 48,
+      "frame_rate": 48,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp48",
+      "fourcc": "4d48",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 48,
+      "frame_rate": 48,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp50",
+      "fourcc": "4d50",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 50,
+      "frame_rate": 50,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp59.94",
+      "fourcc": "4d59",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.001,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    },
+    {
+      "name": "DCI4Kp60",
+      "fourcc": "4d60",
+      "format": "4k-dci",
+      "scan": "progressive",
+      "m_rate": 1.000,
+      "width": 4096,
+      "height": 2160,
+      "field_rate": 60,
+      "frame_rate": 60,
+      "line_rate": {
+          "sdi": 5.94,
+          "hdmi": 5.94
+      },
+      "valid_pixel_formats": {
+          "sdi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12L","R12B"],
+          "hdmi":["2vuy","r210","v210","R10l","R10b","R10L","R10B","R12l","R12L","R12B","BGRA","vRGB","BGRv"]
+      }
+    }
+  ],
+  "pixel_formats": [
+    {
+      "fourcc": "2vuy",
+      "channels": ["Y", "Cb", "Cr"],
+      "pA": 2,
+      "bits_per_pixel": 16,
+      "bits_per_channel": 8,
+      "smpte_range": true,
+      "little_endian": true,
+      "colour_space": "YCbCr",
+      "sampling": "422",
+      "name": "YUV 8bit SMPTE-Range"
+    },
+    {
+      "fourcc": "r210",
+      "channels": ["R", "G", "B"],
+      "pA": 1,
+      "bits_per_pixel": 30,
+      "bits_per_channel": 10,
+      "smpte_range": true,
+      "little_endian": false,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "RGB 10bit SMPTE-Range Big-Endian"
+    },
+    {
+      "fourcc": "v210",
+      "channels": ["Y", "Cb", "Cr"],
+      "pA": 6,
+      "bits_per_pixel": 20,
+      "bits_per_channel": 10,
+      "smpte_range": true,
+      "little_endian": true,
+      "colour_space": "YCbCr",
+      "sampling": "422",
+      "name": "YUV 10bit SMPTE-Range"
+    },
+    {
+      "fourcc": "v212",
+      "channels": ["Y", "Cb", "Cr"],
+      "pA": 2,
+      "bits_per_pixel": 64,
+      "bits_per_channel": 12,
+      "smpte_range": true,
+      "little_endian": true,
+      "colour_space": "YCbCr",
+      "sampling": "422",
+      "name": "YUV 12bit SMPTE-Range"
+    },
+    {
+      "fourcc": "v216",
+      "channels": ["Y", "Cb", "Cr"],
+      "pA": 2,
+      "bits_per_pixel": 64,
+      "bits_per_channel": 16,
+      "smpte_range": true,
+      "little_endian": true,
+      "colour_space": "YCbCr",
+      "sampling": "422",
+      "name": "YUV 16bit SMPTE-Range"
+    },
+    {
+      "fourcc": "R10l",
+      "channels": ["B", "G", "R"],
+      "pA": 1,
+      "bits_per_pixel": 30,
+      "bits_per_channel": 10,
+      "smpte_range": true,
+      "little_endian": true,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "BGR 10bit SMPTE-Range"
+    },
+    {
+      "fourcc": "R10b",
+      "channels": ["R", "G", "B"],
+      "pA": 1,
+      "bits_per_pixel": 30,
+      "bits_per_channel": 10,
+      "smpte_range": true,
+      "little_endian": false,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "RGB 10bit SMPTE-Range Big-Endian"
+    },
+    {
+      "fourcc": "R10L",
+      "channels": ["B", "G", "R"],
+      "pA": 1,
+      "bits_per_pixel": 30,
+      "bits_per_channel": 10,
+      "smpte_range": false,
+      "little_endian": true,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "BGR 10bit"
+    },
+    {
+      "fourcc": "R10B",
+      "channels": ["R", "G", "B"],
+      "pA": 1,
+      "bits_per_pixel": 30,
+      "bits_per_channel": 10,
+      "smpte_range": false,
+      "little_endian": false,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "RGB 10bit Big-Endian"
+    },
+    {
+      "fourcc": "R12l",
+      "channels": ["R", "G", "B"],
+      "pA": 8,
+      "bits_per_pixel": 36,
+      "bits_per_channel": 12,
+      "smpte_range": true,
+      "little_endian": true,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "RGB 12bit SMPTE-Range"
+    },
+    {
+      "fourcc": "R12b",
+      "channels": ["R", "G", "B"],
+      "pA": 8,
+      "bits_per_pixel": 36,
+      "bits_per_channel": 12,
+      "smpte_range": true,
+      "little_endian": false,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "RGB 12bit SMPTE-Range Big-Endian"
+    },
+    {
+      "fourcc": "R12L",
+      "channels": ["R", "G", "B"],
+      "pA": 8,
+      "bits_per_pixel": 36,
+      "bits_per_channel": 12,
+      "smpte_range": false,
+      "little_endian": true,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "RGB 12bit"
+    },
+    {
+      "fourcc": "R12B",
+      "channels": ["R", "G", "B"],
+      "pA": 8,
+      "bits_per_pixel": 36,
+      "bits_per_channel": 12,
+      "smpte_range": false,
+      "little_endian": false,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "RGB 12bit Big-Endian"
+    },
+    {
+      "fourcc": "RGB3",
+      "channels": ["R", "G", "B"],
+      "pA": 3,
+      "bits_per_pixel": 24,
+      "bits_per_channel": 8,
+      "smpte_range": false,
+      "little_endian": true,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "RGB 8bit"
+    },
+    {
+      "fourcc": "BGRA",
+      "channels": ["B", "G", "R", "A"],
+      "pA": 1,
+      "bits_per_pixel": 32,
+      "bits_per_channel": 8,
+      "smpte_range": false,
+      "little_endian": true,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "BGRA 8bit"
+    },
+    {
+      "fourcc": "vRGB",
+      "channels": ["A", "R", "G", "B"],
+      "pA": 1,
+      "bits_per_pixel": 32,
+      "bits_per_channel": 8,
+      "smpte_range": true,
+      "little_endian": true,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "ARGB 8bit SMPTE-Range"
+    },
+    {
+      "fourcc": "BGRv",
+      "channels": ["B", "G", "R", "A"],
+      "pA": 1,
+      "bits_per_pixel": 32,
+      "bits_per_channel": 8,
+      "smpte_range": true,
+      "little_endian": true,
+      "colour_space": "RGB",
+      "sampling": "444",
+      "name": "BGRA 8bit SMPTE-Range"
+    }
+  ]
+}
